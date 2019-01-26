@@ -1,0 +1,95 @@
+.ba-footer {
+    padding: 60px 0 30px;
+
+    @include breakpoint(medium) {
+        padding: 120px 0 40px;
+    }
+
+    @include breakpoint(large) {
+        padding: 175px 0 60px;
+    }
+
+    a {
+        color: $green;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+
+    &__column {
+        border-top: 2px solid $green;
+        padding-top: 100px;
+        margin-top: 22px;
+        order: 1;
+
+
+        @include breakpoint(large) {
+            order: 0;
+        }
+    }
+
+    &__link {
+        display: block;
+        margin-bottom: 15px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    &__logo {
+        font-size: 60px;
+        font-weight: 400;
+        margin-bottom: 63px;
+        line-height: 1.1;
+        display: block;
+    }
+
+    &__social {
+        margin-bottom: 124px;
+
+        a {
+            font-size: 20px;
+        }
+
+        a+a {
+            margin-left: 60px;
+        }
+    }
+
+    &__form {
+        label {
+            font-size: 18px;
+            font-weight: 400;
+            color: $black;
+            margin-bottom: 60px;
+            position: relative;
+            text-transform: uppercase;
+
+            &::before {
+                display: block;
+                content: "";
+                background: $green;
+                width: 2px;
+                height: 55px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: -60px;
+            }
+        }
+
+        input {
+            min-width: 370px;
+            border: 2px solid #ced6af;
+            height: 60px;
+            margin-bottom: 60px;
+        }
+    }
+
+    &__colyright {
+        color: #6e774a;
+        font-size: 11px;
+        font-weight: 300;
+    }
+}
